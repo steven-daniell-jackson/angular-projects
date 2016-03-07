@@ -25,7 +25,7 @@ app.config(['$routeProvider',
         })
         .when('/calculator', {
             templateUrl: 'app/views/calculator.html',
-            controller: ''
+            controller: 'CalcControl'
         })
         .otherwise({
             redirectTo: '/404',
