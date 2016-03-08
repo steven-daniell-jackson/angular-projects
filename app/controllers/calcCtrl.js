@@ -85,10 +85,10 @@ $scope.multiply = function(){
 
 	$scope.operator = "*";
 	$scope.OperatorFlag = true;
+console.log($scope.newValueInput)
+	if ($scope.OperatorFlag || $scope.newValueInput == 0) {
 
-	if ($scope.OperatorFlag) {
-
-		if ($scope.runningTotal == 0){
+		if ($scope.runningTotal == 0 ){
 			$scope.runningTotal = $scope.newValueInput;
 			$scope.displayValue = $scope.runningTotal;
 			console.log("Multiply: " + $scope.newValueInput)
@@ -118,7 +118,7 @@ $scope.divide = function(){
 			console.log("Divide: " + $scope.newValueInput)
 		} else {
 			if ($scope.newValueInput === 0) {
-				$scope.err = "Cannot divide by zero"
+				$scope.err = "Cannot divide by zero";
 			} else {
 				$scope.runningTotal = $scope.runningTotal / $scope.newValueInput;
 				$scope.displayValue = $scope.runningTotal;

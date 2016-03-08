@@ -8,12 +8,12 @@
 <!-- {{calcField}} -->
 <input type="button" value="{{calcField[0]}}" ng-click="updateDisplay(calcField[0])"> 
 <input type="button" value="{{calcField[1]}}" ng-click="divide()" ng-if="calcField[1] === '/'"> 
-<input type="button" value="{{calcField[2]}}" ng-click="clear()" ng-if="calcField[2] === 'clear'">
-<input type="button" value="{{calcField[2]}}" ng-click="updateDisplay(calcField[2])" ng-if="calcField[2] != 'clear'"> 
+
 
 <input type="button" value="{{calcField[1]}}"ng-click="updateDisplay(calcField[1])" ng-if="calcField[1] != '/'"> 
 
-
+<input type="button" value="{{calcField[2]}}" ng-click="clear()" ng-if="calcField[2] === 'clear'">
+<input type="button" value="{{calcField[2]}}" ng-click="updateDisplay(calcField[2])" ng-if="calcField[2] != 'clear'"> 
 
 <input type="button" value="{{calcField[3]}}" ng-click="add()" ng-if="calcField[3] === '+'"> 
 <input type="button" value="{{calcField[3]}}" ng-click="subtract()" ng-if="calcField[3] === '-'"> 
