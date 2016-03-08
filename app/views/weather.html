@@ -1,0 +1,40 @@
+<div class="col-lg-12">
+	<h1>Weather</h1>
+	<label for="weatherSearch">Search by City: </label>
+<input type="text" name="weatherSearch" ng-model="location"></input><br><br>
+
+<hr>
+	{{name}}
+	<hr>
+
+	<div ng-repeat="forecast in forecasts" class="col-md-3" ng-hide="location == '' ">
+
+	
+	
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><b>Date:</b> {{forecast.dt | date}}<br></div>
+  <div class="panel-body text-center">
+    <p><img src="http://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png" alt=""><br>
+    {{forecast.weather[0].description | uppercase}}
+    </p>
+  </div>
+
+  <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item"><b>Time:</b> {{forecast.dt | date:'HH:mm'}}<br></li>
+    <li class="list-group-item"><b>Temperature</b><br>
+Min: {{forecast.main.temp_min}}<br>
+		Max: {{forecast.main.temp_max}}<br>
+
+    </li>
+    <li class="list-group-item"><b>Wind:</b><br>{{forecast.wind.speed}}</li>
+
+  </ul>
+</div>
+
+	</div>
+</div>
+
+
+

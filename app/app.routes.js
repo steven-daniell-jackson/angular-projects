@@ -27,6 +27,10 @@ app.config(['$routeProvider',
             templateUrl: 'app/views/calculator.html',
             controller: 'CalcControl'
         })
+        .when('/weather', {
+            templateUrl: 'app/views/weather.html',
+            controller: 'WeatherController'
+        })
         .otherwise({
             redirectTo: '/404',
             templateUrl: 'app/views/404.html',
