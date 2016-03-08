@@ -1,10 +1,10 @@
 <div class="col-lg-12">
 	<h1>Weather</h1>
 	<label for="weatherSearch">Search by City: </label>
-<input type="text" name="weatherSearch" ng-model="location"></input><br><br>
+<input type="text" name="weatherSearch" ng-model="location" placeholder="Please enter your city"></input><br><br>
 
 <hr>
-	{{name}}
+	<h2 class="text-center">{{name}}</h2>
 	<hr>
 
 	<div ng-repeat="forecast in forecasts" class="col-md-3" ng-hide="location == '' ">
