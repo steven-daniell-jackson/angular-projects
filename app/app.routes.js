@@ -31,6 +31,10 @@ app.config(['$routeProvider',
             templateUrl: 'app/views/weather.html',
             controller: 'WeatherController'
         })
+         .when('/rps', {
+            templateUrl: 'app/views/rock-paper-scissors.html',
+            controller: 'RPS'
+        })
         .otherwise({
             redirectTo: '/404',
             templateUrl: 'app/views/404.html',

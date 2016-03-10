@@ -137,6 +137,7 @@ div.searchWrapper {margin-bottom: 40px;}
     background-color: #000;}
 
 
+
     /* Calculator */
     input[type=button] {
         padding: 30px;
@@ -152,6 +153,66 @@ div.searchWrapper {margin-bottom: 40px;}
         padding: 5px 10px;
         width: 338px;
     }
+
+    /* End Caculator */
+
+    /* Rock Paper Scissors */
+
+    #userSelection .box{
+        background-color: #000;
+        width:397px; height:235px; 
+        transition: 1s linear 0s;
+
+        -webkit-transition: all 1.25s ease;
+        -moz-transition: all 1.25s ease;
+        -ms-transition: all 1.25s ease;
+        -o-transition: all 1.25s ease;
+        transition: all 1.25s ease;
+        border-radius: 7px;
+    }
+
+    /*Box Overlay Flip*/
+
+    .box-flip { 
+
+        margin:10px 20px;
+        height:235px;
+        width:397px;
+        float: left;
+
+    }
+    .box-flip > .front{
+        background-color: #000;
+        position:absolute;
+        transform: perspective( 600px ) rotateY( 0deg );
+        width:392px; height:235px; border-radius: 7px;
+        backface-visibility: hidden;
+        transition: transform 1s linear 0s;
+    }
+    .box-flip > .back{
+        position:absolute;
+        transform: perspective( 600px ) rotateY( 180deg );
+        background: #000; width:397px; height:235px; border-radius: 7px;
+        backface-visibility: hidden;
+        transition: transform 1s linear 0s;
+
+    }
+
+    /*Box Overlay Flip End*/
+
+
+.rps-results {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+button.rps-reset {
+    padding: 20px 40px;
+}
+
+
+    /* End Rock Paper Scissors */
+
 
     /*Media Queries*/
     @media(min-width:768px) {

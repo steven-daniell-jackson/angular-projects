@@ -1,0 +1,51 @@
+<div class="col-lg-12">
+	<h1>Rock Paper Scissors</h1>
+
+	<div class="row">	
+
+		<div class="box-flip ">
+
+			<div class="front text-center" ><img src="img/rps/computer.png" alt=""></div>
+			<div class="back"><br>
+				<div ng-if="computerInput == 'Rock'">
+					<div class="col-md-12 text-center" id="computerSelectionimg"><img src="img/rps/rock.png" alt=""></div>
+				</div>
+				<div ng-if="computerInput == 'Paper'">
+					<div class="col-md-12 text-center"  id="computerSelectionimg"><img src="img/rps/paper.png" alt=""></div>
+				</div>
+
+				<div ng-if="computerInput == 'Scissors'">
+					<div class="col-md-12 text-center"  id="computerSelectionimg"><img src="img/rps/scissors.png" alt=""></div>
+				</div>
+
+			</div></a>
+
+		</div>
+
+	</div>  <!-- end row -->
+
+	
+<div ng-if="results">
+
+<div class="rps-results" ng-if="results =='win'"><img src="img/rps/won.png" alt=""></div>
+<div class="rps-results" ng-if="results =='lose'"><img src="img/rps/lose.png" alt=""></div>
+<div class="rps-results" ng-if="results =='draw'"><img src="img/rps/draw.png" alt=""></div>
+
+
+</div>
+
+
+
+
+	<div class="row" id="userSelection">	
+
+		<div class="col-md-4" id="rockImg"><div class="box text-center"><img src="img/rps/rock.png" alt="" ng-click="validate('Rock')"></div></div>
+		<div class="col-md-4" id="paperImg"><div class="box text-center"><img src="img/rps/paper.png" alt="" ng-click="validate('Paper')"></div></div>
+		<div class="col-md-4" id="scissorsImg"><div class="box text-center"><img src="img/rps/scissors.png" alt="" ng-click="validate('Scissors')"></div></div>
+
+	</div> <!-- end row -->
+
+
+	<button class="rps-reset" ng-click="reset()">Try Again?</button>
+	
+</div>
