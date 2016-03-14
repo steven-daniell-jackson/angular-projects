@@ -29,9 +29,6 @@ $scope.forecasts = formattedDate;
 
 }
 
-
-
-
 	}, true); //End watcher
 
 
